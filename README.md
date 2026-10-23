@@ -33,7 +33,10 @@ cd ~/ros2_ws/src
 git clone https://github.com/mgonzs13/audio_common.git
 cd ~/ros2_ws
 rosdep install --from-paths src --ignore-src -r -y
-colcon build
+colcon build --symlink-install --packages-select audio_common_msgs
+source install/setup.bash
+colcon build --symlink-install --packages-select audio_common
+source install/setup.bash
 ```
 
 ## Docker
